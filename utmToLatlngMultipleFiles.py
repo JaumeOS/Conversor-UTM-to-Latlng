@@ -34,7 +34,7 @@ for filename in os.listdir(folder_path):
         # Convertir a solo coordenadas: latlng
         new_data = []
         for feature in datos['features']:
-            new_feature = feature['geometry']['coordinates']
+            new_feature = feature['geometry']['coordinates'][0]
             new_data.extend(new_feature)
 
         # Guardar los datos modificados en un nuevo archivo
